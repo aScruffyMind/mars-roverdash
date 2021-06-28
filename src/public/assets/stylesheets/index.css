@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Roboto&display=swap');
+
+:root {
+  /* Colors */
+  --pink-out: #ea9995;
+  --copacetic-green: #0bda51;
+  --red-rover: #d63a32;
+  --solid-white: #fff;
+  --shadow-grey: #00000033;
+  --transparent-white: #ffffffe6;
+  --off-white: #f7f7f7;
+  --black: #000;
+
+  /* Fonts */
+  --space-font: 'Orbitron', sans-serif;
+  --body-font: 'Roboto', sans-serif;
+
+  /* Components */
+  --shadow: 2px 2px 8px var(--shadow-grey);
+}
+
+/* -------------------  MOBILE  --------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--solid-white);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+body {
+  font-family: var(--body-font);
+  margin: auto;
+  min-height: 100vh;
+  background-color: var(--off-white);
+}
+
+footer {
+  background-color: var(--red-rover);
+  color: var(--solid-white);
+  padding: 15px;
+  text-align: center;
+}
+
+header {
+  align-items: center;
+  /* background image sourced from http://clipart-library.com/clipart/470319.htm */
+  background-image: linear-gradient(#0000001a, #00000073), url(../images/mars_landscape.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--solid-white);
+  font-size: 95%;
+  height: 120px;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+
+header h1 {
+  font-family: var(--space-font);
+  font-size: 175%;
+  text-shadow: var(--shadow);
+}
+
+hr {
+  border: 1px solid var(--red-rover);
+  margin: 13px auto 16px;
+  width: 50%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: auto;
+  width: 400px;
+}
+
+nav {
+  justify-content: space-evenly;
+  background-color: var(--red-rover);
+  border: 0;
+  color: var(--solid-white);
+  font-family: var(--space-font);
+  font-weight: 600;
+  padding: 0 10px;
+  width: 100%;
+}
+
+#gallery {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--solid-white);
+}
+
+#gallery .loading {
+  margin: 10% auto 30%;
+}
+
+#stats {
+  display: flex;
+  background-color: var(--solid-white);
+  flex-direction: column;
+  padding: 10px;
+  font-size: 110%;
+  text-transform: capitalize;
+  width: 400px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.first-load {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+  justify-content: center;
+  width: 100%;
+}
+
+.loading {
+  margin: 30% auto;
+  width: 65px;
+}
+
+.nav-item {
+  margin: 10px auto 0;
+  padding: 5px 10px 10px;
+}
+
+.no-photo {
+  display: block;
+  margin: auto;
+  width: 90%;
+}
+
+.none-shall-pass {
+  color: var(--pink-out);
+}
+
+.photo-header {
+  background-color: var(--red-rover);
+  color: var(--solid-white);
+  font-family: var(--space-font);
+  font-size: 90%;
+  font-weight: 600;
+  justify-content: space-around;
+  padding: 10px 0;
+  line-height: 2.2rem;
+}
+
+.photo-nav {
+  font-size: 120%;
+  font-weight: 400;
+}
+
+.red {
+  color: var(--red-rover);
+}
+
+.rover-photo {
+  border: 0;
+  display: block;
+  min-height: 200px;
+  width: 100%;
+}
+
+.rover-photo-caption {
+  background-color: var(--shadow-grey);
+  color: var(--solid-white);
+  font-family: var(--space-font);
+  font-size: 80%;
+  padding: 15px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.rover-photo-container {
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.selected {
+  background-color: var(--solid-white);
+  border-bottom: 1px solid var(--solid-white);
+  color: var(--red-rover);
+}
+
+.stats-key {
+  padding: 0 5px;
+  text-align: right;
+  width: 50%;
+}
+
+.stats-value {
+  padding: 0 5px;
+  text-align: left;
+  width: 50%;
+}
+
+/* -------------------  TABLET AND LANDSCAPE MOBILE --------------------- */
+@media only screen and (min-width: 768px), (orientation : landscape) {
+  header {
+    /* background image sourced from http://clipart-library.com/clipart/470319.htm */
+    background-image: linear-gradient(#0000001a, #00000033), url(../images/mars_landscape.jpg);
+  }
+
+  header h1 {
+    font-size: 250%;
+  }
+  
+  hr {
+    display: none;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  #gallery {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--transparent-white);
+  }
+
+  #stats {
+    flex-direction: row;
+    margin: auto;
+    padding: 0 10%;
+    width: 100%;
+  }
+
+  .nav-item-container {
+    width: 80%;
+  }
+
+  .no-photo {
+    margin: 10px;
+    width: 425px;
+  }
+
+  .photo-header {
+    font-size: 100%;
+    justify-content: space-between;
+    padding: 10px 3%;
+  }
+
+  .rover-photo-caption {
+    background-color: transparent;
+    color: var(--black);
+    position: relative;
+  }
+
+  .rover-photo-container {
+    background-color: var(--off-white);
+    border: 1px solid var(--shadow-grey);
+    border-radius: 3px;
+    box-shadow: var(--shadow);
+    margin: 1.25%;
+    padding: 1.5%;
+    width: 30%;
+  }
+
+  .stat-block {
+    margin: 10px auto;
+    width: 325px;
+  }
+
+  .stat-item {
+    margin: 5px auto;
+    width: 100%;
+  }
+}
+
+/* -------------------  LANDSCAPE MOBILE OVERRIDES --------------------- */
+@media only screen and (orientation : landscape) {
+  body {
+    background-color: var(--shadow-grey);
+  }
+
+  .rover-photo-caption {
+    padding: 5px;
+  }
+
+  .rover-photo-container {
+    margin: 1.45%;
+  }
+
+  .no-photo {
+    width: 325px;
+  }
+}
+
+/* -------------------  DESKTOP  -------------------- */
+@media only screen and (min-width: 1224px) {
+  main {
+    width: 1080px;
+  }
+
+  /* Credit to galaxy.jpg from Philippe Donn at https://www.pexels.com/photo/milky-way-illustration-1169754/ */
+  body::before {
+    background-image: url(../images/galaxy.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+}
+
+/* -------------------  LARGE SCREENS  -------------- */
+@media only screen and (min-width: 1824px) {
+  main {
+    width: 1400px;
+  }
+
+  #stats {
+    padding: 0 20%;
+  }
+
+  .nav-item-container {
+    width: 60%;
+  }
+
+  .rover-photo-container {
+    width: 22%;
+  }
+}
